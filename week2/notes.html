@@ -3,45 +3,70 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WDD330 Week 1</title>
+    <title>WDD330 Week 2</title>
     <meta name="description" content="My notes page for WDD 330 week 1." />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
     <main>
-        <h1> Doing Stuff with Web Things Notes</h1>
+        <h1>Javascript: Novice to Ninja</h1>
         <hr>
-        <h2>Week 01 notes and reading</h2>
+        <h2>Week 02 notes and reading</h2>
         <ul>
-            <li>Comuters are very literal and stubid, they do exactly what you tell them and nothing else, and then do not save history, we have to tell programs to store data.
-                We have to tell the computer exactly what infromation to hold, where, and for how long. It is also crucial we understand where it is stored so we can easily access
-                it later. 
+            <li>Comments are extremely important to help others be able to read your code, as well as yourself to be able to reread your own. Remeber to do this for the next team activity.
             </li>
-            <li>Dont Forget to update Page Titles! You can NOT do h1.5 or h5+ </li>
-            <li>Our Job is to make the user expirence better and easier! People should be able to navigate a webage with no deep thought of how to find what they need. It should be 
-                clear, easy to read, and understandable at a glance. 
+            <li>Javascript is a C-Style language because it's written like C. Even though semicolons are not needed use them! You will avoid sooooo many errors. 
+            </li>
+            <li>There are reserved words in JS (like other languaged) that can NOT be used for variables or functions because they already have specific uses. They are:
+                <ul>
+                <li>"abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, export, extends, false, final, finally, 
+                    float, for, function, goto, if, implements, import, in instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, 
+                    super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, volatile, void, while, with, yield"</li>
+                </ul>
             </li>
             <li>
-                Javascript is what allows the page to have actions, and actually intereact with the user, HTML is just what they see. You can embed js in html but seperate files help 
-                for orginization. 
+                JavaScript has a special operator called "typeof()" for finding out the type of a value. You do Not need to set type when defining a variable. You can enter a variable name into 
+                the console to see its value. (console.log() also works for this.) Also "var" is old. Use "let" instead.
             </li>
             <li>
-                Variables are the base level of storing data. Use getitem and setitem to store locally. It does this with key value pairs. Local storage is on the user device. 
+                Constant and variable names can start with any upper or lower-case letter, an underscore, _, or dollar character, $. They can also contain numbers, but cannot start with them.
+                The backslash is used to escape special characters in strings such as: 
+                <li>Single quote marks \', Double quote marks \", End of line \n, Carriage return \r, Tab \t.</li>
+            </li>
+            <li>
+                Symbols can be used to create unique values, which helps to avoid any naming collisions. "Use Symbol()". You can also convert Numbers to strings.
+                Bitwise operators work with operands that are 32-bit integers. These are numbers written in binary (base two) that have 32 digits made up of just 0 s and 1 s.
+            </li>
+            <li>
+                Comparisons work exactly the same as C. Except that NaN is the only value in JavaScript that is not equal to itself! 
+            </li>
+            <li>
+                Delete values from arrays using "delete". There is also a reverse function! Numbers get sorted alphabeltially
+            </li>
+            <li>The callback is provided as a parameter, then invoked inside the body of the function.
+                <p>
+                    function sing(song,callback) { <br>
+                        console.log(`I'm singing along to ${song}.`); <br>
+                        callback(); <br>
+                    }<br>
+                <P>
+            </li>
+            <li>
+                Keep Code DRY! "Don’t Repeat Yourself"
             </li>
         <ul>
 
         <h2>Code Examples</h2>
         <ul>
-            <li><a href="story_editor.html">Sotry Editor</a></li>
+            <li><a href="quizninja.html">Quiz Ninja JS Review</a></li>
         </ul>
 
         <h2>Questions</h2>
             <ul>
-                <li>What are different ways to store data that I havent thought of before?</li>
-                <li>What is the most efficent way to send data between files?</li>
-                <li>Do different kinds of information require different methods of strage and access, or is there a one size fits all?</li>
-                <li>Does order matter when storing local variables?</li>
-                <li>Does js order matter?</li>
+                <li>When is it most effective to use inline scripts in the HTML?</li>
+                <li>Should we always default to js in separate files?</li>
+                <li>What is a good example of when I should use the symbol function?</li>
+                <li>What common pitfalls should I avoid when wrtiting JS</li>
             <ul>
     </main>
 </body>
