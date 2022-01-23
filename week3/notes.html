@@ -9,39 +9,51 @@
 </head>
 <body>
     <main>
-        <h1> Doing Stuff with Web Things Notes</h1>
+        <h1>Javascript: Novice to Ninja: Objects</h1>
         <hr>
         <h2>Week 03 notes and reading</h2>
         <ul>
-            <li>Comuters are very literal and stubid, they do exactly what you tell them and nothing else, and then do not save history, we have to tell programs to store data.
-                We have to tell the computer exactly what infromation to hold, where, and for how long. It is also crucial we understand where it is stored so we can easily access
-                it later. 
-            </li>
-            <li>Dont Forget to update Page Titles! You can NOT do h1.5 or h5+ </li>
-            <li>Our Job is to make the user expirence better and easier! People should be able to navigate a webage with no deep thought of how to find what they need. It should be 
-                clear, easy to read, and understandable at a glance. 
-            </li>
             <li>
-                Javascript is what allows the page to have actions, and actually intereact with the user, HTML is just what they see. You can embed js in html but seperate files help 
-                for orginization. 
+                Objects represent groups of real world things, (people info, addresses, etc.), you can do actions on the objects(methods like select, add display etc.). *To access the object, a method can use the this keyword.
+                The value of this is the object “before dot”, the one used to call the method. It can be used in any function, even if it’s not a method of an object. Arrow functions are special: they don’t have their “own” this.
+                If we reference this from such a function, it’s taken from the outer “normal” function.
             </li>
+
             <li>
-                Variables are the base level of storing data. Use getitem and setitem to store locally. It does this with key value pairs. Local storage is on the user device. 
+                You cal call an object in more than one way. "superman.fly()" or "superman['fly']()". You can use "In" to see if a value is there. *Objects Are Copied By Reference. *This means that if a variable is assigned to an object 
+                that already exists, it will simply point to the exact same space in memory. So any changes made using either reference will affect the same object.
+            </li>
+
+            <li>
+                Math is a built in object *Be carefel of rounding errors (float vs int etc.). You can also generate random numbers.
+            </li>
+
+            <li>
+                Fun fact: "The Epoch is 1st January 1970. This is an arbitrary date that is used in programming as a reference point in time from which to measure dates. This allows dates to be expressed as an integer that represents the number of seconds since the Epoch."
+                "It results in a very large number and there is a potential problem looming in 2038 when the number of seconds since the Epoch will be greater than 2,147,483,647, which is the maximum value that many computers can deal with as a signed 32-bit integer. "
+                Working with dates and timezones can be tricky. The moment.js library gives you a large number of methods that make it easier to work with dates, as well as support for multiple locales.
+            </li>
+                DOM = Document object model: an HTML document as a network of connected nodes that form a tree-like structure. THIS IS HOW HTML AND JAVASCRIPT CONNECT! (queries etc.)
+                You can use replaceChild() to replace items in the DOM. You can also update CSS in javascript.
+            <li>
+                Events Happen when the user does something (click, drag, open etc.). You can use this to trigger a function or an action. Note: *There are no 'swipe' events. These need to be created by using a combination of touchstart, touchmove, and touchleave events 
+                that monitor the distance and direction moved from start to finish of a touch event.
             </li>
         <ul>
 
         <h2>Code Examples</h2>
         <ul>
-            <li><a href="story_editor.html">Sotry Editor</a></li>
+            <li><a href="this.html">Testing this</a></li>
+            <li><a href="quizninja.html">Quiz Ninja</a></li>
         </ul>
 
         <h2>Questions</h2>
             <ul>
-                <li>What are different ways to store data that I havent thought of before?</li>
-                <li>What is the most efficent way to send data between files?</li>
-                <li>Do different kinds of information require different methods of strage and access, or is there a one size fits all?</li>
-                <li>Does order matter when storing local variables?</li>
-                <li>Does js order matter?</li>
+                <li>Why is this neccessary? Can we work without it? How does it make things better?</li>
+                <li>Why do we use a random date to calulate dates in code?</li>
+                <li>What is the best way to keep track of object and values?</li>
+                <li>Is there a good place that just list what each javascipt funtion does?</li>
+                <li>What's better, javascipt or typescript?</li>
             <ul>
     </main>
 </body>
