@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD330 Week 4</title>
+    <meta name="description" content="My notes page for WDD 330 week 4." />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <main>
+        <h1>Javascript: Novice to Ninja: Objects</h1>
+        <hr>
+        <h2>Week 03 notes and reading</h2>
+        <ul>
+            <li>
+                Objects represent groups of real world things, (people info, addresses, etc.), you can do actions on the objects(methods like select, add display etc.). *To access the object, a method can use the this keyword.
+                The value of this is the object “before dot”, the one used to call the method. It can be used in any function, even if it’s not a method of an object. Arrow functions are special: they don’t have their “own” this.
+                If we reference this from such a function, it’s taken from the outer “normal” function.
+            </li>
+
+            <li>
+                You cal call an object in more than one way. "superman.fly()" or "superman['fly']()". You can use "In" to see if a value is there. *Objects Are Copied By Reference. *This means that if a variable is assigned to an object 
+                that already exists, it will simply point to the exact same space in memory. So any changes made using either reference will affect the same object.
+            </li>
+
+            <li>
+                Math is a built in object *Be carefel of rounding errors (float vs int etc.). You can also generate random numbers.
+            </li>
+
+            <li>
+                Fun fact: "The Epoch is 1st January 1970. This is an arbitrary date that is used in programming as a reference point in time from which to measure dates. This allows dates to be expressed as an integer that represents the number of seconds since the Epoch."
+                "It results in a very large number and there is a potential problem looming in 2038 when the number of seconds since the Epoch will be greater than 2,147,483,647, which is the maximum value that many computers can deal with as a signed 32-bit integer. "
+                Working with dates and timezones can be tricky. The moment.js library gives you a large number of methods that make it easier to work with dates, as well as support for multiple locales.
+            </li>
+                DOM = Document object model: an HTML document as a network of connected nodes that form a tree-like structure. THIS IS HOW HTML AND JAVASCRIPT CONNECT! (queries etc.)
+                You can use replaceChild() to replace items in the DOM. You can also update CSS in javascript.
+            <li>
+                Events Happen when the user does something (click, drag, open etc.). You can use this to trigger a function or an action. Note: *There are no 'swipe' events. These need to be created by using a combination of touchstart, touchmove, and touchleave events 
+                that monitor the distance and direction moved from start to finish of a touch event.
+            </li>
+        <ul>
+
+        <h2>Code Examples</h2>
+        <ul>
+            <li><a href="this.html">Testing this</a></li>
+            <li><a href="quizninja.html">Quiz Ninja</a></li>
+        </ul>
+
+        <h2>Questions</h2>
+            <ul>
+                <li>Why is this neccessary? Can we work without it? How does it make things better?</li>
+                <li>Why do we use a random date to calulate dates in code?</li>
+                <li>What is the best way to keep track of object and values?</li>
+                <li>Is there a good place that just list what each javascipt funtion does?</li>
+                <li>What's better, javascipt or typescript?</li>
+            <ul>
+    </main>
+</body>
+</html>
