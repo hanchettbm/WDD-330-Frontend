@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD330 Week 5</title>
+    <meta name="description" content="My notes page for WDD 330 week 4." />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <main>
+        <h1>Javascript: Novice to Ninja: Forms</h1>
+        <hr>
+        <h2>Week 05 notes and reading</h2>
+        <ul>
+            <li>
+                Styling is crucial in forms. The user needs to easily be able to input data. We want to entice people to fill them out. Placeholders and "require" are helpful for this. 
+                The action attribute is the URL that the form will be submitted to so it can be processed on the server side. If the form goes nowhere it's not useful, the whole idea is 
+                to allow the user to send information to the owner.
+            </li>
+
+            <li>
+                Once a form is sent we can access it using javascript, This is done using the DOM like everything else. We can the manipulate or store this data. *Note reset buttons are bad because
+                they can easily be accidentally pressed, and all the work goes away which discourages the user from trying again. There are also event listeners that do actions to help the user fill out the forms
+                easier. For example the focus  event occurs when an element is focused on. In the case of an input element, this is when the cursor is placed inside the element (either by clicking or tapping on 
+                it or navigating to it using the keyboard). It puts that field into a special popup that allows the user to focus. You can also use focus in HTML now.
+            </li>
+
+            <li>
+                There are many form elemts that allow a user to choose from a list. If you do this make sure to always check for what value they used. For example. "radio.value" This tells you what the user 
+                actually picked. You can also force these to change or update them based on other inputs. 
+            </li>
+
+            <li>
+                Making sure users input valid responses is really important. We want to check if the email is the right format or if the value was even input. This is built in using require and type. *It is not perfect!!
+                You can add custom validation to get the missing checks. preventDefault() helps with this.
+            </li>
+                We can even hide the submit button as a check until the form is completed the way we need. 
+        <ul>
+
+        <h2>Code Examples</h2>
+        <ul>
+            <li><a href="quizninja.html">Quiz Ninja</a></li>
+        </ul>
+
+        <h2>Questions</h2>
+            <ul>
+                <li>What things make forms easier to fill out for users?</li>
+                <li>What makes forms the most appealing?</li>
+                <li>How can we best separate the data when we get a form submission?</li>
+    </main>
+</body>
+</html>
