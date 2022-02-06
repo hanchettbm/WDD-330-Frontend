@@ -3,9 +3,10 @@
  <head>
 <title>Ninja</title>
 <script>
-        let response: document.querySelector('#response');
+        let response = document.querySelector('#response');
+        let view;
 
-        ask(name){
+        function ask(name){
             console.log('ask() invoked');
             if(this.questions.length > 0) {
                 this.question = this.questions.pop();
@@ -19,7 +20,7 @@
         view.response.addEventListener('submit', (event) => game.check(event), false);
         view.hide(view.response);
 
-        check(event){
+        function check(event){
             console.log('check(event) invoked');
             event.preventDefault();
             const response = view.response.answer.value;
@@ -32,9 +33,9 @@
                 view.render(view.result,`Wrong! The correct answer was ${answer}`,{'class':'wrong'});
             }
             this.ask();
-        },
+        }
 
-        setup(){
+        function setup(){
             this.show(this.question);
             this.show(this.response);
             this.show(this.result);
@@ -45,12 +46,12 @@
             this.resetForm();
         }
 
-        resetForm(){
+        function resetForm(){
             this.response.answer.value = '';
             this.response.answer.focus();
         }
 
-        check(event){
+        function check(event){
             event.preventDefault();
             const response = view.response.answer.value;
             const answer = this.question.realName;
@@ -65,7 +66,7 @@
             this.ask();
         }
         
-        start(quiz){
+        function start(quiz){
             console.log('start() invoked');
             this.score = 0;
             this.questions = [...quiz];
@@ -73,13 +74,13 @@
             this.ask();
         }
 
-        teardown(){
+        function teardown(){
             this.hide(this.question);
             this.hide(this.response);
             this.show(this.start);
         }
 
-        gameOver(){
+        function gameOver(){
             console.log('gameOver() invoked');
             view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
             view.teardown();
