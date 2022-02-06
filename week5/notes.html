@@ -14,28 +14,34 @@
         <h2>Week 05 notes and reading</h2>
         <ul>
             <li>
-                Styling is crucial in forms. The user needs to easily be able to input data. We want to entice people to fill them out. Placeholders and "require" are helpful for this. 
-                The action attribute is the URL that the form will be submitted to so it can be processed on the server side. If the form goes nowhere it's not useful, the whole idea is 
-                to allow the user to send information to the owner.
+               Errors are usually caused by: System error (there’s a problem with the system or external devices with which the program is interacting.) 
+               Programmer error (the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.)
+               User error (the user has entered data incorrectly, which the program is unable to handle.) An exception is an error that produces a 
+               return value that can then be used by the program to deal with the error. 
             </li>
 
             <li>
-                Once a form is sent we can access it using javascript, This is done using the DOM like everything else. We can the manipulate or store this data. *Note reset buttons are bad because
-                they can easily be accidentally pressed, and all the work goes away which discourages the user from trying again. There are also event listeners that do actions to help the user fill out the forms
-                easier. For example the focus  event occurs when an element is focused on. In the case of an input element, this is when the cursor is placed inside the element (either by clicking or tapping on 
-                it or navigating to it using the keyboard). It puts that field into a special popup that allows the user to focus. You can also use focus in HTML now.
+                Stack traces show exactly when and where the error occured which allows the user to better understand what is happening and debug. 
             </li>
 
             <li>
-                There are many form elemts that allow a user to choose from a list. If you do this make sure to always check for what value they used. For example. "radio.value" This tells you what the user 
-                actually picked. You can also force these to change or update them based on other inputs. 
+                A warning is an error that is small enough to NOT crash but should still be fixed. ECMAScript 5 introduced a strict mode that produces
+                 more exceptions and warnings and prohibits the use of some deprecated features. Using this version will help to catch errors earrly on.
+                 In addition to using javascript built in error checking it is crucial that the programmer also does their own. (Mostly making sure that the 
+                 variable actually contains what we think it should in all different cases). It is also important to warn the programmer and user with an output 
+                 that we can understand. Alerts in the browser are great for this. We can also use the console to debug, Console.log is a great way to see what 
+                 is happening at different times in the code. 
             </li>
 
+
             <li>
-                Making sure users input valid responses is really important. We want to check if the email is the right format or if the value was even input. This is built in using require and type. *It is not perfect!!
-                You can add custom validation to get the missing checks. preventDefault() helps with this.
+                Browsers also have debugging tools. Use the "debugger" keyword. (Make sure you remove this from the final version!!!!!!!!!!).
+                Error objects also help, are are usually paired with a try, catch statmenent. These exceptions are thrown. 
+                It is also useful to run test cases to see if the output is what we expect in different scenarios. It's useful to write code to pass 
+                our tests. the "jest" library helps with this. There are also lots of functions that test equality. Make sure that the results are not only 
+                just producing output but a realistic one. 
             </li>
-                We can even hide the submit button as a check until the form is completed the way we need. 
+                
         <ul>
 
         <h2>Code Examples</h2>
@@ -45,9 +51,10 @@
 
         <h2>Questions</h2>
             <ul>
-                <li>What things make forms easier to fill out for users?</li>
-                <li>What makes forms the most appealing?</li>
-                <li>How can we best separate the data when we get a form submission?</li>
+                <li>We use typescript at work and it is basically javascript with more error checking, will we ever use this in classes?</li>
+                <li>How can you catch errors simply due to spelling?</li>
+                <li>Are there places on campus that let us code review with others?</li>
+                <li>How do you come up with test cases?</li>
     </main>
 </body>
 </html>
