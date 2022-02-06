@@ -15,6 +15,14 @@ const links = [
         label: "Week 4",
         url: "week4/index.html"
       },
+      {
+        label: "Week 5",
+        url: "week5/index.html"
+      },
+      {
+        label: "Week 6",
+        url: "week6/index.html"
+      },
   ]
 
 links.forEach((link) => { 
