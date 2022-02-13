@@ -9,6 +9,7 @@ button.addEventListener('click', function(){
     const listItem = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = "checkbox";
+    checkbox.id = "checkbox";
     const listText = document.createElement('span');
     listText.id = "unChecked";
     const listButton = document.createElement('button');
@@ -78,7 +79,7 @@ function showChecked() {
   function showAll() {
     var list = document.getElementById("myUL1").getElementsByTagName("span");
     for (li of list) {
-    li.parentElement.style.display = "block";
+    li.parentElement.style.display = "flex";
     }
   }
 

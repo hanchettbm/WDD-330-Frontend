@@ -35,12 +35,16 @@ button {
 }
 
 input {
-	width: 200px;
+	padding: 5px;
+	margin: 10px;
 }
 
 label {
-	font-size: 0.9rem;
+	font-size: 1.2rem;
+	padding-left: 8px;
 }
+
+
 .listcontainer {
 	border: 1px solid #bbb;
 	margin: 1rem;
@@ -49,6 +53,15 @@ label {
 
 .list {
 	margin: 0.2rem;
+}
+
+.input {
+	margin-left: 7px;
+	margin-top: 10px;
+}
+
+input#addItem {
+	width: 55%;
 }
 
 ul {
@@ -61,6 +74,29 @@ li {
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 0.5rem;
+}
+
+input#checkbox {
+	width: 25px; 
+	height: 25px;
+}
+
+.filter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.filter .buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.filter h3 {
+	margin: 15px;
 }
 
 @media only screen and (min-width: 32.5em) {
