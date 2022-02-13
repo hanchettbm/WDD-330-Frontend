@@ -9,8 +9,8 @@ button.addEventListener('click', function(){
     const listItem = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = "checkbox";
-    checkbox.id = "checkbox"
     const listText = document.createElement('span');
+    listText.id = "unChecked";
     const listButton = document.createElement('button');
     listItem.appendChild(checkbox);
     listItem.appendChild(listText);
@@ -32,6 +32,7 @@ button.addEventListener('click', function(){
     for(var i = 0 ; i < li.length; i++){
         li[i].addEventListener('click', function(event) {
         var input = this.querySelector('input[type=checkbox]');
+        var label = this.querySelector('span');
         if (input.checked){
             function strikeThrough(text) {
                 return text
@@ -39,11 +40,13 @@ button.addEventListener('click', function(){
                   .map(char => char + '\u0336')
                   .join('')
               }
-              listText.innerText = strikeThrough(listText.innerText);
+              label.textContent = strikeThrough(label.textContent);
+              label.id = "checked";
+              
         }
-
-        if (input.unchecked){
-            listText.innerText = listText.innerText.replace(/[\u0336]/g, '');
+        if (!input.checked){
+            label.innerText = label.innerText.replace(/[\u0336]/g, '');
+            label.id = "unChecked";
         }
         });
     }
