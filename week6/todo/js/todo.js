@@ -7,17 +7,34 @@ button.addEventListener('click', function(){
     input.value = '';
     
     const listItem = document.createElement('li');
+    const checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.id = "checkbox"
     const listText = document.createElement('span');
     const listButton = document.createElement('button');
+    listItem.appendChild(checkbox);
     listItem.appendChild(listText);
     listText.textContent = userInput;
     listItem.appendChild(listButton);
     listButton.textContent = ' ❌';
-    list.appendChild(listItem);
+    if (listText.textContent){
+        list.appendChild(listItem);
+    }
     
     listButton.onclick = function(e) {
         list.removeChild(listItem);
     }
 
     input.focus();
+
 });
+
+if ( document.getElementById("checkbox").checked == true) {
+    console.log("checked");
+ function strike(text) {
+     var result = "<del>" + text + "</del>";
+     return result;
+   }
+
+   listText.innerHTML = strike(listText.textContent);
+}
