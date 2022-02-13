@@ -53,3 +53,33 @@ button.addEventListener('click', function(){
 
 });
 
+function showChecked() {
+    var list = document.getElementById("myUL1").getElementsByTagName("span");
+    for (li of list) {
+      var id = li.getAttribute("id");
+      id = id.toString();
+      if (id == "unChecked"){
+          li.parentElement.style.display = "none";
+      }
+    }
+  }
+
+  function showUnChecked() {
+    var list = document.getElementById("myUL1").getElementsByTagName("span");
+    for (li of list) {
+      var id = li.getAttribute("id");
+      id = id.toString();
+      if (id == "checked"){
+          li.parentElement.style.display = "none";
+      }
+    }
+  }
+
+  function showAll() {
+    var list = document.getElementById("myUL1").getElementsByTagName("span");
+    for (li of list) {
+    li.parentElement.style.display = "block";
+    }
+  }
+
+

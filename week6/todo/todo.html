@@ -10,7 +10,7 @@
 <h1>To Do List</h1>
 <main>
 	<div class="listcontainer">
-		<ul class="list">
+		<ul class="list" id="myUL1">
 		</ul>
 	</div>
 	<div class="input">
@@ -20,9 +20,9 @@
 	</div>
 	<div class="filter">
 		<h3>Filter Options:</h3>
-		<button>All</button>
-		<button>Not Completed</button>
-		<button>Completed</button>
+		<button onclick="showAll()"id="all">All</button>
+		<button onclick="showUnChecked()" id="notComplete">Not Completed</button>
+		<button onclick="showChecked()" id="complete">Completed</button>
 	</div>
 </main>
  <script src="js/todo.js"></script>
