@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD330 Week 8</title>
+    <meta name="description" content="My notes page for WDD 330 week 4." />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <main>
+        <h1>Javascript: Novice to Ninja: Functions and AJAX</h1>
+        <hr>
+        <h2>Week 08 notes and reading</h2>
+        <ul>
+            <li>
+               Errors are usually caused by: System error (there’s a problem with the system or external devices with which the program is interacting.) 
+               Programmer error (the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.)
+               User error (the user has entered data incorrectly, which the program is unable to handle.) An exception is an error that produces a 
+               return value that can then be used by the program to deal with the error. 
+            </li>
+
+            <li>
+                Stack traces show exactly when and where the error occured which allows the user to better understand what is happening and debug. 
+            </li>
+
+            <li>
+                A warning is an error that is small enough to NOT crash but should still be fixed. ECMAScript 5 introduced a strict mode that produces
+                 more exceptions and warnings and prohibits the use of some deprecated features. Using this version will help to catch errors earrly on.
+                 In addition to using javascript built in error checking it is crucial that the programmer also does their own. (Mostly making sure that the 
+                 variable actually contains what we think it should in all different cases). It is also important to warn the programmer and user with an output 
+                 that we can understand. Alerts in the browser are great for this. We can also use the console to debug, Console.log is a great way to see what 
+                 is happening at different times in the code. 
+            </li>
+
+
+            <li>
+                Browsers also have debugging tools. Use the "debugger" keyword. (Make sure you remove this from the final version!!!!!!!!!!).
+                Error objects also help, are are usually paired with a try, catch statmenent. These exceptions are thrown. 
+                It is also useful to run test cases to see if the output is what we expect in different scenarios. It's useful to write code to pass 
+                our tests. the "jest" library helps with this. There are also lots of functions that test equality. Make sure that the results are not only 
+                just producing output but a realistic one. 
+            </li>
+                
+        <ul>
+
+        <h2>Code Examples</h2>
+        <ul>
+            <li><a href="quizninja.html">Quiz Ninja</a></li>
+        </ul>
+
+        <h2>Questions</h2>
+            <ul>
+                <li>We use typescript at work and it is basically javascript with more error checking, will we ever use this in classes?</li>
+                <li>How can you catch errors simply due to spelling?</li>
+                <li>Are there places on campus that let us code review with others?</li>
+                <li>How do you come up with test cases?</li>
+    </main>
+</body>
+</html>
