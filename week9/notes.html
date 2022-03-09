@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WDD330 Week 8</title>
+    <title>WDD330 Week 9</title>
     <meta name="description" content="My notes page for WDD 330 week 4." />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
     <main>
-        <h1>Javascript: Novice to Ninja: Functions and AJAX</h1>
+        <h1>Javascript: Novice to Ninja: Windows Objects and APIs</h1>
         <hr>
-        <h2>Week 08 notes and reading</h2>
+        <h2>Week 09 notes and reading</h2>
         <ul>
             <li>
-               Errors are usually caused by: System error (there’s a problem with the system or external devices with which the program is interacting.) 
-               Programmer error (the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.)
-               User error (the user has entered data incorrectly, which the program is unable to handle.) An exception is an error that produces a 
-               return value that can then be used by the program to deal with the error. 
+                The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen. 
+                Window objects only appear in the browser enviroments (so Node JS will not show this.).
             </li>
 
             <li>
-                Stack traces show exactly when and where the error occured which allows the user to better understand what is happening and debug. 
+                Global variables are actual properties of a global object. In a browser environment, the global object is the window object. This means that any global 
+                variable created is actually a property of the window object. This means that the browser window holds the global data that needs to be accessed. 
+                parseInt() and isNaN(), are actually methods of the global object. The window.alert() method will pause the execution of the program and display a 
+                message in a dialog box. You can also use window.confrim and window.prompt to get user responses. THESE STOPE THE PROGRAM FROM RUNNING UNTIL A RESPONSE 
+                IS GIVEN!
             </li>
 
             <li>
@@ -35,11 +37,27 @@
 
 
             <li>
-                Browsers also have debugging tools. Use the "debugger" keyword. (Make sure you remove this from the final version!!!!!!!!!!).
-                Error objects also help, are are usually paired with a try, catch statmenent. These exceptions are thrown. 
-                It is also useful to run test cases to see if the output is what we expect in different scenarios. It's useful to write code to pass 
-                our tests. the "jest" library helps with this. There are also lots of functions that test equality. Make sure that the results are not only 
-                just producing output but a realistic one. 
+                The Navigator object contains information about the browser being used (This can be faked so use the URL more). The window.location property is 
+                an object that contains information about the URL of the current page.The protocol property returns a string describing the protocol used (such as http, https).
+                You can also access host, hostname, port, pathname, and search as well as origin. The window.history property can be used to access information about any previously 
+                visited pages in the current browser session. (Avoid confusing this with the new HTML5 History API) The window.history.length property shows how many pages have been 
+                visited before arriving at the current page. The window.history.go() method can be used to go to a specific page, where 0 is the current page:                
+            </li>
+
+            <li>
+                A new window can be opened using the window.open(). Close with the close() method. The window.screen object contains information about the screen the browser is displayed 
+                on (height, with etc.) You can also use Document.Wrtie(). Cookies are created in the Document window. You can also set timed interval functions. You can use timing to create
+                animations on the page. *In general, it is typically better to use CSS for any animation effects, although there may be times when JavaScript might be the better solution.
+            </li>
+
+            <li>
+                The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser.The HTML5 specification contains a number of APIs that 
+                help to gain access to hardware, such as cameras, batteries, geolocation, and the graphics card. If a browser supports the Web Storage API, the window object will have a 
+                property called localStorage, which is a native object with a number of properties and methods used to store data. There are also geolocation functions.
+                The canvas element was introduced to allow graphics to be drawn onto a web page in real time using JavaScript.
+                The terms shim and polyfill are often used interchangeably. The main difference between them is that a shim is a piece of code that adds some missing functionality to a 
+                browser, although the implementation method may differ slightly from the standard API. A polyfill is a shim that achieves the same functionality, while also using the API
+                commands that would be used if the feature was supported natively.
             </li>
                 
         <ul>
@@ -51,10 +69,10 @@
 
         <h2>Questions</h2>
             <ul>
-                <li>We use typescript at work and it is basically javascript with more error checking, will we ever use this in classes?</li>
-                <li>How can you catch errors simply due to spelling?</li>
-                <li>Are there places on campus that let us code review with others?</li>
-                <li>How do you come up with test cases?</li>
+                <li>How is accsessing the browser window data different from accessing the session data, or are they linked?</li>
+                <li>How do you keep up on API updates?</li>
+                <li>Are the laws and limits to cookie and browsing data? What can we not track?</li>
+                <li>Is it better to work with native or server information instead of the browser?</li>
     </main>
 </body>
 </html>

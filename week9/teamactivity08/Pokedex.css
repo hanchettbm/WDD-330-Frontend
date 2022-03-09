@@ -1,7 +1,0 @@
-div#pagNav_holder {
-    display: flex;
-  }
-  
-  div#pagNav_holder > p {
-    padding: 0 0.5rem;
-  }
