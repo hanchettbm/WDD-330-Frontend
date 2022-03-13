@@ -9,30 +9,26 @@
 </head>
 <body>
     <main>
-        <h1>Javascript: Novice to Ninja: Windows Objects and APIs</h1>
+        <h1>MDN: Validating Forms and Using Fetch</h1>
         <hr>
         <h2>Week 10 notes and reading</h2>
         <ul>
             <li>
-                The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen. 
-                Window objects only appear in the browser enviroments (so Node JS will not show this.).
+                Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format. This is called client-side 
+                form validation, and helps ensure data submitted matches the requirements set forth in the various form controls. This is why the required tag on an input form 
+                is so crucial. 
             </li>
 
             <li>
-                Global variables are actual properties of a global object. In a browser environment, the global object is the window object. This means that any global 
-                variable created is actually a property of the window object. This means that the browser window holds the global data that needs to be accessed. 
-                parseInt() and isNaN(), are actually methods of the global object. The window.alert() method will pause the execution of the program and display a 
-                message in a dialog box. You can also use window.confrim and window.prompt to get user responses. THESE STOPE THE PROGRAM FROM RUNNING UNTIL A RESPONSE 
-                IS GIVEN!
+                Client-side validation should not be considered an exhaustive security measure!! You should always have more then one type of error checking. For client side validation 
+                you can check if the form input is the right format (Pasword, email must contain '@' etc.) or make it required meaning the user can not leave it blank. These are specifially 
+                for forms. If the information is correctly formatted, the application allows the data to be submitted to the server and (usually) saved in a database; if the information isn't 
+                correctly formatted, it gives the user an error message explaining what needs to be corrected, and lets them try again. This is built in. 
             </li>
 
             <li>
-                A warning is an error that is small enough to NOT crash but should still be fixed. ECMAScript 5 introduced a strict mode that produces
-                 more exceptions and warnings and prohibits the use of some deprecated features. Using this version will help to catch errors earrly on.
-                 In addition to using javascript built in error checking it is crucial that the programmer also does their own. (Mostly making sure that the 
-                 variable actually contains what we think it should in all different cases). It is also important to warn the programmer and user with an output 
-                 that we can understand. Alerts in the browser are great for this. We can also use the console to debug, Console.log is a great way to see what 
-                 is happening at different times in the code. 
+                Although we want to make filling forms as easy as possible we also have to make sure we are getting the right data, otherwise it's pointless. 
+                JavaScript also has customizable validation. HTML built in validation includes: required, minlength, maxlength, pattern, invalid, etc. 
             </li>
 
 
@@ -64,7 +60,7 @@
 
         <h2>Code Examples</h2>
         <ul>
-            <li><a href="quizninja.html">Quiz Ninja</a></li>
+            <li><a href="fruitvalidation.html">Quiz Ninja</a></li>
         </ul>
 
         <h2>Questions</h2>
