@@ -6,11 +6,64 @@
     <title>Weather World</title>
     <meta name="description" content="My home page for WDD 330 Final." />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/small.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+    <script defer src="js/weatherapi.js"></script>
+    <script defer src="js/visits.js"></script>
 </head>
 <body>
     <main>
         <h1>Welcome to Weather world!</h1>
         <hr>
+
+        <div class="contentbox weather">
+            <section class="stats">
+                <h2>Weather Summary</h2>
+                <hr>
+                <p id="description">Current Status:</p>
+                <p id="current-temp">Current Temperature:</p>
+                <p>Wind Chill: <span id="chill"></span></p>
+                <p id="humidity">Humidity: <span>70%</span>°F</p>
+                <p id="speed">Wind Speed:</p>
+                <p id="sun-rise">Sunrise:</p>
+                <p id="sun-set">Sunset:</p>
+                <p id="visibility">Visibility: </p>
+            </section>
+            <div class="contentbox forecast">
+                <h2>5 Day Forecast</h2>
+                <div class="contentbox forecast table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="week-day">MON</th>
+                                <th class="week-day">TUES</th>
+                                <th class="week-day">WED</th>
+                                <th class="week-day">THUR</th>
+                                <th class="week-day">FRI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                <td>
+                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                <td>
+                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                <td>
+                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                <td>
+                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+             </div>
+         </div> 
+
+        <div class="visits">Days between Visits: <span id="count"></span></div>
+
     </main>
 </body>
 </html>

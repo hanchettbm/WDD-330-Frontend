@@ -1,0 +1,48 @@
+/* Page content */
+.contentbox {
+	font-family: 'Quattrocento', serif;
+	background-color: #cccccc;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid;
+    padding: 15px;
+}
+
+/* Weather */
+.contentbox.weather {
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Weather Stats */
+.contentbox .stats {
+	background: radial-gradient(#eee, #3c687c);
+	border: 1px solid #000;
+	padding: 0.2rem;
+	padding-bottom: 0;
+	box-shadow: 0 0 30px #333;
+	opacity: .9;
+}
+
+.contentbox .stats h2 {
+	padding-bottom: 0;
+	margin: 0;
+}
+
+.contentbox .stats hr {
+	border: 1px solid black;
+}
+
+.contentbox .stats p {
+	text-align: left;
+	margin: 5px;
+}
+
+/* Forecast Table */
+.contentbox.forecast {
+	display: none;
+}

@@ -1,0 +1,77 @@
+@media only screen and (min-width: 60em){
+
+    /* Weather */
+    .contentbox.weather {
+        width: 95%;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: 1069px){
+        .contentbox.first-half {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Stats */
+    .contentbox .stats {
+        width: 80%;
+    }
+    .contentbox .stats h2 {
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    .contentbox .stats hr {
+        border: 1px solid black;
+    }
+
+    .contentbox .stats p {
+        text-align: center;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    /* Forecast Table */
+    .contentbox.forecast {
+        background-color: transparent;
+        border: none;
+        display: block;
+    }
+
+    .contentbox.forecast.table{
+        display: flex;
+        justify-content: center;
+        border: none;
+    }
+
+    .col-head,th {
+        font-weight: 700;
+        font-size: 1rem;
+        background-color: #a8724e;
+    }
+
+    table,th,td {
+        border: thin solid #333;
+        border-collapse: collapse;
+        padding: 25px 55px 30px 55px;
+    }
+
+    td {
+        background-color: white;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+}
