@@ -9,13 +9,32 @@
     <link rel="stylesheet" href="css/small.css" />
     <link rel="stylesheet" href="css/medium.css" />
     <link rel="stylesheet" href="css/large.css" />
-    <script defer src="js/weatherapi.js"></script>
     <script defer src="js/visits.js"></script>
+    <script defer src="js/weatherapi.js" type="text/javascript"></script>
 </head>
 <body>
     <main>
         <h1>Welcome to Weather world!</h1>
         <hr>
+        <h3>Here at Weather World, you can enter any address you would like, and our API will update you with useful information about your
+            area. This is great for planning trips based on this. Even use our To Do App at the bottom of the page to plan activites based on 
+            the weather results!
+        </h3>
+        <div>
+            <h3> Input your address and then hit the Enter Key and watch your wether update in real time based on your location!</h3>
+            <form name="myForm" action="/final/index.html" method="post">
+                <input id="address" type="text" placeholder="Enter address here" required />
+                <input type="submit" value="Submit">
+                </form>
+           <div>
+               <p>Latitude:
+                   <input type="text" id="latitude" readonly />
+               </p>
+               <p>Longitude:
+                   <input type="text" id="longitude" readonly />
+               </p>
+           </div>
+       </div>
 
         <div class="contentbox weather">
             <section class="stats">
@@ -24,7 +43,7 @@
                 <p id="description">Current Status:</p>
                 <p id="current-temp">Current Temperature:</p>
                 <p>Wind Chill: <span id="chill"></span></p>
-                <p id="humidity">Humidity: <span>70%</span>°F</p>
+                <p id="humidity">Humidity:</p>
                 <p id="speed">Wind Speed:</p>
                 <p id="sun-rise">Sunrise:</p>
                 <p id="sun-set">Sunset:</p>
@@ -46,21 +65,41 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                    <img class="weekly-image" src="images/sun_placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
                                 <td>
-                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                    <img class="weekly-image" src="images/sun_placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
                                 <td>
-                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                    <img class="weekly-image" src="images/sun_placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
                                 <td>
-                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                    <img class="weekly-image" src="images/sun_placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
                                 <td>
-                                    <img class="weekly-image" src="images/placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
+                                    <img class="weekly-image" src="images/sun_placeholder.png" alt="daily forecast"><br> <p class="weekly-temp"></p></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
              </div>
          </div> 
+       <!-- Add the this google map apis to webpage -->
+       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAoTxoCVmJAxzEdoQX07XCdrcgnAcyFgUQ&libraries=places"></script>
+       <script>
+       google.maps.event.addDomListener(window, 'load', initialize);
+       function initialize() {
+       var input = document.getElementById('address');
+       var autocomplete = new google.maps.places.Autocomplete(input);
+       autocomplete.addListener('place_changed', function () {
+       var place = autocomplete.getPlace();
+       // place variable will have all the information you are looking for.
+        let latitude = place.geometry['location'].lat();
+        let longitude = place.geometry['location'].lng();
+         document.getElementById("latitude").value = latitude;
+         window.localStorage.setItem('latitude',latitude);
+         window.localStorage.setItem('longitude',longitude);
+         window.dispatchEvent( new Event('storage'));
+         document.getElementById("longitude").value = longitude;
+       });
+       }
+       </script>
 
         <div class="visits">Days between Visits: <span id="count"></span></div>
 
