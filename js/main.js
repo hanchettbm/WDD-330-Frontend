@@ -55,6 +55,10 @@ const links = [
         label: "Final Project",
         url: "final/index.html"
       },
+      {
+        label: "Final Project Video",
+        url: "https://youtu.be/iku3rhmqxyY"
+      }
   ]
 
 links.forEach((link) => { 
