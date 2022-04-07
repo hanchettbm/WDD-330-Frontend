@@ -1,3 +1,15 @@
+/* Heading */
+h1 {
+	padding: 1em;
+	background-color: #f2b36bd4;
+	text-align: center;
+	width: 100%;
+}
+
+h3 {
+	text-align: center;
+}
+
 /* Page content */
 .contentbox {
 	font-family: 'Quattrocento', serif;
@@ -20,7 +32,7 @@
 
 /* Weather Stats */
 .contentbox .stats {
-	background: radial-gradient(#eee, #3c687c);
+	background: radial-gradient(#eee, #747C92);
 	border: 1px solid #000;
 	padding: 0.2rem;
 	padding-bottom: 0;
@@ -42,7 +54,217 @@
 	margin: 5px;
 }
 
-/* Forecast Table */
-.contentbox.forecast {
-	display: none;
+.contentbox .stats .stats-img  {
+	display: flex;
+}
+
+img.weather-img {
+	max-width: 100%;
+}
+.contentbox .stats .stats-data {
+	width: 100%;
+	text-align: center;
+}
+
+
+ /* Forecast Table */
+ .contentbox.forecast {
+	background-color: transparent;
+	border: none;
+	display: block;
+	max-width: 100%;
+}
+
+.contentbox.forecast.table{
+	display: flex;
+	justify-content: center;
+	border: none;
+	max-width: 100%;
+}
+
+table {
+	max-width: 100%;
+}
+
+.col-head,th {
+	font-weight: 700;
+	font-size: 1rem;
+	background-color: #ac465ace;
+}
+
+table,th,td {
+	border: thin solid #333;
+	border-collapse: collapse;
+	padding: 5px 5px 5px 5px;
+}
+
+td {
+	background-color: white;
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+/* Input for Coordinates */
+.lat-long {
+	display: flex;
+}
+
+.lat-long input {
+	padding: 10px;
+	margin: 10px;
+
+}
+
+.contentbox.weather input#address{
+	padding: 10px 5px 10px 5px;
+	width: 40%;
+	text-align: center;
+}
+
+/* Form Styiling */
+form fieldset {
+    margin: 1rem;
+    border: 1px solid #3c747c;
+    border-radius: 5px;
+    padding: 20px;
+	background: radial-gradient(#eee, #94C595);
+	display: block;
+}
+
+.form-group {
+	display: block;
+	width: 100%;
+}
+
+.form-img {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form legend {
+    color:black;
+    font-family:'Quattrocento', serif;
+    margin: 5px;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+
+form label.personal input, form label.personal select{
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    width: 90%;
+    max-width: 300px;
+    background-color: rgba(229, 230, 220, 0.795);
+    margin: 8px;
+    margin-left: 0px;
+}
+
+form textarea {
+    font-family: 'Quattrocento', serif;
+    font-size: small;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+}
+
+form input.submitButton {
+    font-family: 'Quattrocento', serif;
+    border: solid 1px black;
+    background-color: #828fa5;
+    color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    width: 300px;
+    max-width: 300px;
+}
+
+form input.submitButton:hover {
+    background-color: #566573;
+}
+
+form label.personal input:required{
+    border: red solid 1px;
+}
+
+form label.personal input:required:valid{
+    border: green solid 1px;
+}
+
+.response {
+    text-align: center;
+}
+
+/* Contact Form */
+.contentbox.contact-form {
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.contentbox.contact-form form fieldset{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.comments {
+	display: inline-grid;
+	font-family: 'Quattrocento', serif;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.comments textarea {
+	margin-top: 5px;
+}
+
+/* Thanks Page */
+.thanks {
+    padding-bottom: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thanks img {
+    padding: 40px;
+    width: 700px;
+}
+
+#maps {
+	width: 100%;
+    height: 300px;
+	
+}
+
+.stats-boxes {
+	display: flex;
+}
+
+/* Footer */
+footer {
+	background-color: #f2b36bd4;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    font-size: 15px;
 }

@@ -3,52 +3,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather World</title>
+    <title>Weather World | Home</title>
     <meta name="description" content="My home page for WDD 330 Final." />
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/small.css" />
     <link rel="stylesheet" href="css/medium.css" />
     <link rel="stylesheet" href="css/large.css" />
+    <script defer src="js/dates.js"></script>
     <script defer src="js/visits.js"></script>
-    <script defer src="js/weatherapi.js" type="text/javascript"></script>
+    <script defer src="js/weatherapi.js"></script>
 </head>
 <body>
     <main>
-        <h1>Welcome to Weather world!</h1>
+        <h1>Welcome to Weather world</h1>
         <hr>
         <h3>Here at Weather World, you can enter any address you would like, and our API will update you with useful information about your
-            area. This is great for planning trips based on this. Even use our To Do App at the bottom of the page to plan activites based on 
-            the weather results!
+            area. This is great for planning trips or just learning more about other places.
         </h3>
-        <div>
-            <h3> Input your address and then hit the Enter Key and watch your wether update in real time based on your location!</h3>
-            <form name="myForm" action="/final/index.html" method="post">
+        <div class="contentbox weather">
+            <p> Input your address and then hit the Enter and watch your wether update in real time based on your location!</p>
                 <input id="address" type="text" placeholder="Enter address here" required />
-                <input type="submit" value="Submit">
-                </form>
-           <div>
-               <p>Latitude:
-                   <input type="text" id="latitude" readonly />
-               </p>
-               <p>Longitude:
-                   <input type="text" id="longitude" readonly />
-               </p>
-           </div>
        </div>
 
+       <!-- Stats -->
         <div class="contentbox weather">
-            <section class="stats">
-                <h2>Weather Summary</h2>
-                <hr>
-                <p id="description">Current Status:</p>
-                <p id="current-temp">Current Temperature:</p>
-                <p>Wind Chill: <span id="chill"></span></p>
-                <p id="humidity">Humidity:</p>
-                <p id="speed">Wind Speed:</p>
-                <p id="sun-rise">Sunrise:</p>
-                <p id="sun-set">Sunset:</p>
-                <p id="visibility">Visibility: </p>
-            </section>
+            <div class="stats">
+                <div class="stats-data">
+                    <section>
+                        <h2>Weather Summary</h2>
+                        <hr>
+                        <p id="description">Current Status:</p>
+                        <p id="current-temp">Current Temperature:</p>
+                        <p>Wind Chill: <span id="chill"></span></p>
+                        <p id="humidity">Humidity:</p>
+                        <p id="speed">Wind Speed:</p>
+                        <p id="sun-rise">Sunrise:</p>
+                        <p id="sun-set">Sunset:</p>
+                        <p id="visibility">Visibility: </p>
+                    </section>
+                </div>
+                <div class="stats-img">
+                    <img class="weather-img" src="images/weather-images.jpeg" alt="weather img">
+                </div>
+            </div>
+
+            <!-- Location Data -->
+            <div class="lat-long">
+                <p>Latitude: <input type="text" id="latitude" readonly /></p>
+                <p>Longitude: <input type="text" id="longitude" readonly /></p>
+            </div>
+
+            <!-- Forecast Table -->
             <div class="contentbox forecast">
                 <h2>5 Day Forecast</h2>
                 <div class="contentbox forecast table">
@@ -80,28 +84,72 @@
                 </div>
              </div>
          </div> 
-       <!-- Add the this google map apis to webpage -->
-       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAoTxoCVmJAxzEdoQX07XCdrcgnAcyFgUQ&libraries=places"></script>
+
+         <!-- Embedded Map Data -->
+         <div class="contentbox weather">
+            <iframe
+                id="maps"
+                width="600"
+                height="350"
+                frameborder="0" style="border:0"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBWMLZWN3xinFxMBfTD8ea-HrkLy-9yLTA&center=43.82538,-111.792824&zoom=18&maptype=satellite"
+                allowfullscreen>
+            </iframe>
+            <p>*Map Of the area you chose: Click to drag map around</p>
+        </div>
+
+        <!-- Contact Us Form -->
+        <div class="contact-box">
+            <div class="contentbox contact-form">
+                <form method="get" action="thanks.html">
+                    <fieldset>
+                        <legend>Get In Contact With Us</legend>
+                        <div class="form-group">
+                        <label class="personal">First Name*<input type="text" name="firstname" required></label>
+                        <label class="personal">Last Name*<input type="text" name="lastname" required></label>
+                        <label class="personal">Cell Phone Number <input type="tel" name="phone" placeholder="(555) 555-5555"></label>
+                        <label class="personal">Email*<input type="email" name="email" placeholder="businesses@comerce.com" required></label>
+                        <label class="comments">Comments<textarea rows="5" cols="46" placeholder="Add comments here"></textarea></label>
+                        </div>
+                        <div class="form-img"><img class="weather-img" src="images/weather-logos.jpg" alt="weather img"></div>
+                    </fieldset>
+                    <div class="submit">
+                        <input type="submit" value="Contact Us" class="submitButton">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+       <!-- Google API Embedded Location Functions -->
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWMLZWN3xinFxMBfTD8ea-HrkLy-9yLTA&libraries=places"></script>
        <script>
-       google.maps.event.addDomListener(window, 'load', initialize);
+       google.maps.event.addDomListener(window, 'load', initialize); // Look for event 
+
        function initialize() {
-       var input = document.getElementById('address');
-       var autocomplete = new google.maps.places.Autocomplete(input);
-       autocomplete.addListener('place_changed', function () {
-       var place = autocomplete.getPlace();
-       // place variable will have all the information you are looking for.
-        let latitude = place.geometry['location'].lat();
-        let longitude = place.geometry['location'].lng();
-         document.getElementById("latitude").value = latitude;
-         window.localStorage.setItem('latitude',latitude);
-         window.localStorage.setItem('longitude',longitude);
-         window.dispatchEvent( new Event('storage'));
-         document.getElementById("longitude").value = longitude;
-       });
+        var input = document.getElementById('address'); // Get the address
+        var autocomplete = new google.maps.places.Autocomplete(input); // Autofill it
+        // If changed get the location data
+        autocomplete.addListener('place_changed', function () { 
+            var place = autocomplete.getPlace(); // The place variable contains coordinates. 
+                let latitude = place.geometry['location'].lat();
+                let longitude = place.geometry['location'].lng();
+                // Show in view for user
+                document.getElementById("latitude").value = latitude;
+                document.getElementById("longitude").value = longitude;
+                // Keep the data in local storage and then send an event
+                window.localStorage.setItem('latitude',latitude);
+                window.localStorage.setItem('longitude',longitude);
+                window.dispatchEvent( new Event('storage'));
+            });
        }
        </script>
 
+       <footer>
+        <div>&copy; Weather World | WDD330 | Baden Hanchett</div>
+        <div class="date"><span id="currentDate"></span></div>
         <div class="visits">Days between Visits: <span id="count"></span></div>
+    </footer>
 
     </main>
 </body>
